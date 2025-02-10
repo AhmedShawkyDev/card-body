@@ -1,25 +1,7 @@
-import { useState } from "react";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
-import { Bounce, ToastContainer, toast } from "react-toastify";
-const BodyFive = () => {
-  const notify = () =>
-    toast.success("Thank you !", {
-      position: "bottom-right",
-      autoClose: 2000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "dark",
-      transition: Bounce,
-    });
-  const [input, setInput] = useState({
-    name: "",
-    email: "",
-    phone: "",
-  });
+
+const BodyFive = ({ input, setInput, isClose }) => {
   const nameInput = (e) => {
     setInput({ ...input, name: e.target.value });
   };
@@ -32,8 +14,9 @@ const BodyFive = () => {
   const handelSubmit = (e) => {
     e.preventDefault();
     console.log(input);
-    notify();
     setInput({ name: "", email: "", phone: "" });
+    localStorage.setItem("step5", JSON.stringify(input));
+    isClose();
   };
   return (
     <div>
@@ -111,25 +94,14 @@ flex justify-center items-center"
         <button
           onClick={handelSubmit}
           type="submit"
-          className="cursor-pointer  bg-linear-to-r from-[#E2C385] to-[#B78647] mt-2
-w-[199px] h-[48px] rounded-[8px] px-[18px]
-py-[32px] flex justify-center items-center font-normal font-[Raleway] text-white"
+          //           className="cursor-pointer  bg-linear-to-r from-[#E2C385] to-[#B78647] mt-2
+          // w-[199px] h-[48px] rounded-[8px] px-[18px]
+          // py-[32px] flex justify-center items-center font-normal font-[Raleway] text-white"
+          className="text-white w-full lg:w-auto bg-linear-to-r from-[#E2C385] to-[#B78647] text-[16px] 
+            whitespace-nowrap font-semibold rounded-lg  px-4 md:px-[44px] py-[13px] text-center cursor-pointer mt-4"
         >
           Get Your Offer
         </button>
-        <ToastContainer
-          position="bottom-right"
-          autoClose={2000}
-          hideProgressBar={false}
-          newestOnTop={false}
-          closeOnClick
-          rtl={false}
-          pauseOnFocusLoss
-          draggable
-          pauseOnHover
-          theme="dark"
-          transition={Bounce}
-        />
       </div>
     </div>
   );

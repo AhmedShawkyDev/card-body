@@ -1,24 +1,31 @@
-import One from "./One";
-import Two from "./Two";
-import Three from "./Three";
-
-import Four from "./Four";
-import Five from "./Five";
 import Overlays from "./overlay/Overlays";
 import { useState } from "react";
-
+import { Bounce, ToastContainer, toast } from "react-toastify";
 const Quiz = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const notify = () =>
+    toast.success("Thank you !", {
+      position: "bottom-right",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+      transition: Bounce,
+    });
   const open = () => {
     setIsOpen(true);
     console.log("isOpen");
   };
-  const close = () => {
+  const isClose = () => {
     setIsOpen(false);
+    notify();
   };
   return (
     <>
-      <Overlays isOpen={isOpen} close={close} />
+      <Overlays isOpen={isOpen} isClose={isClose} />
       <div className="">
         <button
           onClick={open}
@@ -26,12 +33,20 @@ const Quiz = () => {
         >
           Button
         </button>
-        {/* <One /> */}
-        {/* <Two /> */}
-        {/* <Three /> */}
-        {/* <Four /> */}
-        {/* <Five /> */}
       </div>
+      <ToastContainer
+        position="bottom-right"
+        autoClose={2000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+        transition={Bounce}
+      />
     </>
   );
 };
