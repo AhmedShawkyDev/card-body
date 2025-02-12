@@ -1,6 +1,5 @@
 import { createPortal } from "react-dom";
 
-// import One from "../One";
 import Header from "../HeaderQuiz";
 const overLay = document.getElementById("overlay");
 const Overlays = ({ isOpen, isClose }) => {

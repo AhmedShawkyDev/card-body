@@ -58,7 +58,8 @@ import { useState } from "react";
 import { Bounce, ToastContainer, toast } from "react-toastify";
 
 const Quiz: React.FC = () => {
-  const [isOpen, setIsOpen] = useState < boolean > false;
+  // const [isOpen, setIsOpen] = useState < boolean > false;
+  const [isOpen, setIsOpen] = useState(false);
 
   const notify = (): void =>
     toast.success("Thank you !", {
