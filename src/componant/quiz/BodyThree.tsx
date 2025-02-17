@@ -18,16 +18,16 @@ const BodyThree: React.FC<BodyThreeProps> = ({ setPops, input, setInput }) => {
   };
   return (
     <div>
-      <div className="bg-neutral-300 h-[8px] w-[534px] mt-6 rounded-b-xl  rounded-t-xl mx-auto my-auto  ">
-        <div className="bg-[#CEA768] h-[8px] w-[318px] mt-6 rounded-b-xl  rounded-t-xl  "></div>
+      <div className="bg-neutral-300 h-[8px] md:w-[534px] w-[200px] mt-6 rounded-b-xl  rounded-t-xl mx-auto my-auto">
+        <div className="bg-[#CEA768] h-[8px] md:w-[106px] w-3/5 mt-6 rounded-b-xl  rounded-t-xl"></div>
       </div>
       <h1 className="flex justify-center items-center text-black mt-3 font-light font-[Roboto] text-[16px]">
         Step 3/5
       </h1>
-      <h1 className="sm:text-[20px]  md:text-[24px] text-black flex justify-center items-center font-normal font-[Raleway] mt-2">
+      <h1 className="text-black flex justify-center items-center font-normal font-[Raleway] text-[12px] sm:text-[20px] md:text-[24px]">
         Choose the Number of Bedrooms
       </h1>
-      <h1 className="text-[#6B665F] text-lg font-[Raleway] flex justify-center items-center text-center mt-2 sm:text-[16px] md:text-[18px]">
+      <h1 className="text-[#6B665F] text-wrap text-[10px] sm:text-[16px] md:text-[18px] text-lg font-[Raleway] flex justify-center items-center text-center">
         How many bedrooms fit your needs? Let us know so we can find the best
         options for you.
       </h1>
@@ -37,7 +37,7 @@ const BodyThree: React.FC<BodyThreeProps> = ({ setPops, input, setInput }) => {
             <label
               key={option}
               htmlFor={option}
-              className={`flex justify-start items-center w-[349px] h-[54px] text-black hover:text-[#CEA768] border-2 border-[#C8C8CA] p-3 rounded-xl hover:border-[#CEA768] cursor-pointer ${
+              className={`flex justify-start items-center w-[170px] md:w-[349px] md:h-[54px] text-black hover:text-[#CEA768] border-2 border-[#C8C8CA] p-3 rounded-xl hover:border-[#CEA768] cursor-pointer ${
                 input.step3 === option ? "border-[#CEA768]" : ""
               }`}
             >
@@ -50,7 +50,7 @@ const BodyThree: React.FC<BodyThreeProps> = ({ setPops, input, setInput }) => {
                 className={`mr-5 w-[17px] h-[17px] cursor-pointer flex items-center justify-center  text-[#CEA768] appearance-none  border-2 border-gray-400 hover:border-[#CEA768]  rounded-full checked:bg-[#CEA768] checked:border-transparent focus:outline-3 focus:outline-offset-3 focus:outline-[#CEA768] active:bg-[#CEA768] ml-2`}
               />
               <h1
-                className={`flex justify-center font-[Roboto] mt-1 font-light items-center text-[20px] ${
+                className={`flex justify-center font-[Roboto] mt-1 font-light items-center md:text-[20px] text-[16px] ${
                   input.step3 === option ? "text-[#CEA768] text-[18px]" : ""
                 }`}
               >
@@ -60,10 +60,16 @@ const BodyThree: React.FC<BodyThreeProps> = ({ setPops, input, setInput }) => {
           )
         )}
       </div>
-      <div className="mt-11 lg:m-5  xl:mt-9  md:my-5  sm:my-5 font-semibold flex justify-center items-center">
+      <div className="mt-11 lg:m-5  xl:mt-9  md:my-5  sm:my-5 font-semibold flex flex-col justify-end items-center">
         <button
           onClick={four}
-          className=" hover:text-[#B78647] hover:bg-none hover:bg-white hover:border-2 hover:border-[#B78647] hover:duration-100  mt-6 text-white w-[25%] lg:w-auto bg-linear-to-r from-[#E2C385] to-[#B78647] text-[16px]  whitespace-nowrap font-semibold rounded-lg  px-4 md:px-[44px] py-[13px] text-center cursor-pointer"
+          className=" hover:text-[#B78647] hover:bg-none hover:bg-white hover:border-2 hover:border-[#B78647] hover:duration-100 text-white 
+          md:w-[25%] lg:w-auto bg-linear-to-r from-[#E2C385] to-[#B78647] md:text-[16px] 
+          whitespace-nowrap font-semibold rounded-lg  px-4 md:px-[44px] py-[13px] 
+          text-center cursor-pointer
+              text-[15px]
+          
+          "
         >
           Continue
         </button>

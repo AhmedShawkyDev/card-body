@@ -41,21 +41,31 @@ const Header: React.FC<HeaderProps> = ({ isClose }) => {
   };
   return (
     <div className="flex flex-col justify-center items-center modal position-relative opacity-100">
-      <div className="xl:w-[1062px] xl:h-[626px] xl:text-[24px] flex-col justify-between rounded-3xl bg-white text-white">
-        <div className="xl:w-full xl:h-[83px] lg:w-full lg:h-[83px] md:w-[full] md:h-[70px] sm:w-full sm:h-[60px] bg-[#CEA768] flex justify-center items-center rounded-tr-3xl rounded-tl-3xl">
-          <div className=" xl:flex xl:justify-between xl:w-[982px] xl:h-[35px] lg:flex lg:justify-between lg:w-[800px] lg:h-[35px] md:flex md:justify-between md:w-[750px] md:h-[40px] sm:flex sm:justify-between sm:w-[600px] sm:h-[40px]">
+      <div className=" h-300 xl:w-[1062px] xl:h-[626px] xl:text-[24px] flex-col justify-between rounded-3xl bg-white text-white w-3/4">
+        <div className="xl:w-full xl:h-[83px] lg:w-full lg:h-[83px] md:w-[full] md:h-[70px] sm:w-full sm:h-[60px] h-[60px] w-full bg-[#CEA768] flex justify-center items-center rounded-tr-3xl rounded-tl-3xl">
+          <div
+            className=" 
+            
+          flex justify-between items-center space-x-1 w-full h-[40px]
+          xl:flex xl:justify-between xl:w-[982px] xl:h-[35px] 
+          lg:flex lg:justify-between lg:w-[800px] lg:h-[35px] 
+          md:flex md:justify-between md:w-[750px] md:h-[40px] 
+          sm:flex sm:justify-between sm:w-[600px] sm:h-[40px]"
+          >
             <button
               onClick={back}
-              className=" flex justify-center items-center cursor-pointer hover:text-[#CEA768] hover:bg-white hover:rounded-full hover:duration-100 w-[120px]"
+              className=" flex justify-center items-center cursor-pointer hover:text-[#CEA768] hover:bg-white hover:rounded-full hover:duration-100 md:w-[120px]"
             >
-              <FaArrowLeft className=" xl:mr-3 xl:mt-1 xl:ml-2 lg:mr-3 lg:mt-1 lg:ml-7 md:mr-3 md:mt-1 md:ml-7 sm:mr-3 sm:mt-1 sm:ml-5" />
-              <div className="mt-0 font-normal text-[24px] ">Back</div>
+              <FaArrowLeft className=" ml-3 xl:mr-3 xl:mt-1 xl:ml-2 lg:mr-3 lg:mt-1 lg:ml-7 md:mr-3 md:mt-1 md:ml-7 sm:mr-3 sm:mt-1 sm:ml-5 " />
+              <div className="mt-0 font-normal md:text-[24px] sm:text-[20px] ">
+                Back
+              </div>
             </button>
-            <h1 className="font-semibold mr-11 text-[24px]">
+            <h1 className="font-semibold  mr-2 md:mr-11 md:text-[24px]   ">
               Speak to Our Experts
             </h1>
             <button onClick={isClose}>
-              <IoClose className="lg:mr-5 md:mr-5 sm:mr-5 mt-1 text-[30px] cursor-pointer hover:text-[#CEA768] hover:bg-white  hover:rounded-full hover:duration-100 " />
+              <IoClose className=" mr-2 mt-1 text-[20px] md:text-[30px] cursor-pointer hover:text-[#CEA768] hover:bg-white  hover:rounded-full hover:duration-100 " />
             </button>
           </div>
         </div>

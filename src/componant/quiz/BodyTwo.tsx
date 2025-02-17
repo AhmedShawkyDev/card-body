@@ -31,26 +31,26 @@ const BodyTwo: React.FC<BodyTwoProps> = ({ setPops, input, setInput }) => {
 
   return (
     <div>
-      <div className="bg-neutral-300 h-[8px] w-[534px] mt-6 rounded-b-xl  rounded-t-xl mx-auto my-auto  ">
-        <div className="bg-[#CEA768] h-[8px] w-[212px] mt-6 rounded-b-xl  rounded-t-xl  "></div>
+      <div className="bg-neutral-300 h-[8px] md:w-[534px] w-[200px] mt-6 rounded-b-xl  rounded-t-xl mx-auto my-auto">
+        <div className="bg-[#CEA768] h-[8px] md:w-[106px] w-2/5 mt-6 rounded-b-xl  rounded-t-xl"></div>
       </div>
       <h1 className="flex justify-center items-center text-black mt-3 font-light font-[Roboto] text-[16px]">
         Step 2/5
       </h1>
-      <h1 className=" sm:text-[20px] md:text-[24px] text-black flex justify-center items-center font-normal font-[Raleway] mt-2">
+      <h1 className="text-black flex justify-center items-center font-normal font-[Raleway] text-[12px] sm:text-[20px] md:text-[24px]">
         Pick Your Perfect Property Type
       </h1>
-      <h1 className="text-[#6B665F] text-lg font-[Raleway] flex justify-center items-center text-center mt-2 sm:text-[16px] md:text-[18px]">
+      <h1 className="text-[#6B665F] text-[10px] sm:text-[16px] md:text-[18px] text-lg font-[Raleway] flex justify-center items-center text-center">
         What type of property are you looking for? Let us know so we can tailor
         our recommendations!
       </h1>
       <form
         onSubmit={handleSubmit}
-        className="flex gap-6 mt-4 flex-wrap justify-center items-center"
+        className="flex gap-6 mt-20 flex-wrap justify-center items-center "
       >
         <label
           htmlFor="option1"
-          className={`flex justify-start  items-center w-[349px] h-[54px] text-black hover:text-[#CEA768] border-2 border-[#C8C8CA] p-3 rounded-xl hover:border-[#CEA768] cursor-pointer
+          className={`flex justify-start  items-center w-[170px] md:w-[349px] md:h-[54px] text-black hover:text-[#CEA768] border-2 border-[#C8C8CA] p-3 rounded-xl hover:border-[#CEA768] cursor-pointer
                ${
                  input.step2 === "option1"
                    ? "text-[#CEA768] border-[#CEA768]"
@@ -77,7 +77,7 @@ const BodyTwo: React.FC<BodyTwoProps> = ({ setPops, input, setInput }) => {
 
         <label
           htmlFor="option2"
-          className={`flex justify-start items-center w-[349px] h-[54px]  text-black hover:text-[#CEA768]  border-2 border-[#C8C8CA] p-3 rounded-xl hover:border-[#CEA768] cursor-pointer
+          className={`flex justify-start items-center w-[170px] md:w-[349px] md:h-[54px]  text-black hover:text-[#CEA768]  border-2 border-[#C8C8CA] p-3 rounded-xl hover:border-[#CEA768] cursor-pointer
              ${
                input.step2 === "option2"
                  ? "text-[#CEA768] border-[#CEA768]"
@@ -103,7 +103,7 @@ const BodyTwo: React.FC<BodyTwoProps> = ({ setPops, input, setInput }) => {
         </label>
         <label
           htmlFor="option3"
-          className={`flex justify-start items-center w-[349px] h-[54px] text-black hover:text-[#CEA768] border-2 border-[#C8C8CA] p-3 rounded-xl hover:border-[#CEA768] cursor-pointer
+          className={`flex justify-start items-center w-[170px] md:w-[349px] md:h-[54px] text-black hover:text-[#CEA768] border-2 border-[#C8C8CA] p-3 rounded-xl hover:border-[#CEA768] cursor-pointer
              ${
                input.step2 === "option3"
                  ? "text-[#CEA768] border-[#CEA768]"
@@ -130,7 +130,7 @@ const BodyTwo: React.FC<BodyTwoProps> = ({ setPops, input, setInput }) => {
 
         <label
           htmlFor="option4"
-          className={`flex justify-start items-center w-[349px] h-[54px] text-black hover:text-[#CEA768] border-2 border-[#C8C8CA] p-3 rounded-xl hover:border-[#CEA768] cursor-pointer
+          className={`flex justify-start items-center w-[170px] md:w-[349px] md:h-[54px] text-black hover:text-[#CEA768] border-2 border-[#C8C8CA] p-3 rounded-xl hover:border-[#CEA768] cursor-pointer
              ${
                input.step2 === "option4"
                  ? "text-[#CEA768] border-[#CEA768]"
@@ -155,10 +155,19 @@ const BodyTwo: React.FC<BodyTwoProps> = ({ setPops, input, setInput }) => {
           </h1>
         </label>
       </form>
-      <div className="  mt-13 font-semibold flex justify-center items-center lg:m-5 xl:mt-9 md:my-5 sm:my-5">
+      <div
+        className="  mt-20 md:mt-50 lg:mt-20 font-semibold flex flex-col 
+      justify-end items-center 
+      "
+      >
         <button
           onClick={three}
-          className="hover:text-[#B78647] hover:bg-none hover:bg-white hover:border-2 hover:border-[#B78647] hover:duration-100 text-white w-[25%] lg:w-auto bg-linear-to-r from-[#E2C385] to-[#B78647] text-[16px] whitespace-nowrap font-semibold rounded-lg  px-4 md:px-[44px] py-[13px] text-center cursor-pointer mt-24"
+          className=" hover:text-[#B78647] hover:bg-none hover:bg-white hover:border-2 hover:border-[#B78647] hover:duration-100 text-white 
+          md:w-[25%] lg:w-auto bg-linear-to-r from-[#E2C385] to-[#B78647] md:text-[16px] 
+          whitespace-nowrap font-semibold rounded-lg  px-4 md:px-[44px] py-[13px] 
+          text-center cursor-pointer
+          text-[15px] 
+          "
         >
           Continue
         </button>
